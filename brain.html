@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Brain Scope</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="./js/brain.js"></script>
+</head>
+<body>
+
+<header>
+<h1 align="center">EmotionScope</h1>
+<p align="center">Click on the brain areas to add alpha or beta rays</p>
+</header>
+
+<div class="switch" id="switch">
+<div class="slider right" id="slider"></div>
+<span id="mimicBtn">Mimic</span>
+<span class="active">BrainScan</span>
+</div>
+
+<main class="brain-dashboard">
+
+<div class="beam-buttons">
+<button id="alphaBtn">Alpha rays</button>
+<br><br>
+<button id="betaBtn">Betta rays</button>
+<br><br>
+<button id="gammaBtn">Gamma rays</button>
+<br><br>
+<button id="resetBtn">Clear</button>
+</div>
+<br>
+
+<svg id="brainSVG" width="400" height="400" viewBox="0 0 400 400">
+<!-- Левая и правая половины -->
+<path id="leftBrain"
+d="M100,200 C100,100 200,100 200,200 C200,300 100,300 100,200"
+fill="#ddd" stroke="#333" stroke-width="2"
+style="pointer-events: all; cursor: pointer;" />
+<path id="rightBrain"
+d="M200,200 C200,100 300,100 300,200 C300,300 200,300 200,200"
+fill="#ddd" stroke="#333" stroke-width="2"
+style="pointer-events: all; cursor: pointer;" />
+</svg>
+<br>
+
+<p id="emotionText">Emotion: —</p>
+<br>
+
+</main>
+
+</body>
+</html>
